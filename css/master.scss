@@ -1,0 +1,170 @@
+
+$color-background-main: #F6F9F9;
+$color-background-light: #FFFFFF;
+$color-primary-main: #005CA9;
+$color-secondary-main: #F39200;
+$color-text-main: #3A4859;
+$color-success: #00E594;
+$color-danger: #C20000;
+$space-24: 24px;
+$space-16: 16px;
+$space-12: 12px;
+$space-8: 8px;
+$space-4: 4px;
+$shadow-1: 0px 2px 1px 0px rgba(143, 85, 0, 0.16);
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: $color-background-main;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    &.face {
+        background: url('https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80');
+        background-position: center;
+        background-size: cover;
+    }
+}
+header {
+    background-color: $color-primary-main;
+    padding: $space-24 $space-8 $space-24 $space-24;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    .close {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.face-container {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: $color-background-light;
+    padding: $space-24;
+    border-radius: $space-16 $space-16 0 0;
+    position: fixed;
+    bottom: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: $color-primary-main;
+    text-align: center;
+    font-weight: 650;
+}
+h1 {
+    // font-size: 24px;
+    line-height: 1.1;
+}
+h2 {
+    // font-size: 24px;
+    line-height: 1.2;
+}
+h3 {
+    // font-size: 24px;
+    line-height: 1.3;
+}
+p {
+    color: $color-text-main;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.instruction {
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: $space-12;
+    }
+}
+.button {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    color: white;
+    text-decoration: none;
+    background-color: $color-secondary-main;
+    border-radius: $space-8;
+    border-radius: 4px;
+    box-shadow: $shadow-1;
+}
+.button-outline {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    color: $color-text-main;
+    text-decoration: none;
+    background-color: $color-background-light;
+    border-radius: $space-8;
+    border-radius: 4px;
+    box-shadow: $shadow-1;
+    border: 1px solid $color-text-main;
+}
+.mask {
+    height: 65vh;
+    margin-top: 10vh;
+    width: 90vw;
+    margin-left: 5vw;
+    border: 4px solid $color-success;
+    border-radius: 50% 50% 50% 50%/40% 40% 60% 60%;
+    position: fixed;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -300px;
+        right: -300px;
+        bottom: -300px;
+        left: -300px;
+        border: 296px solid rgba(0,0,0,.7); /* Outer border */
+        border-radius: 55% 55% 55% 55%/49% 49% 60% 60%;
+    }
+}
+.tip {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: $space-24;
+}
+.text-lg {
+    font-size: 18px;
+}
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 82vh;
+}
+.modal-overlay {
+    background-color: rgba(0,0,0,.7);
+    width: 100vw;
+    height: 100vh;
+    padding: $space-24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal {
+        background-color: $color-background-light;
+        padding: $space-24;
+        border-radius: $space-16;
+    }
+}
