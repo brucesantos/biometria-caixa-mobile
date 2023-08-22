@@ -47,6 +47,7 @@ header .close {
   border-radius: 16px 16px 0 0;
   position: fixed;
   bottom: 0;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
